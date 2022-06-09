@@ -1,0 +1,28 @@
+//Create your own store! Your store should sell one type of things, like clothing or bikes, whatever you want your store to specialize in. You should have a table for all the items in your store, and at least 5 columns for the kind of data you think you'd need to store. You should sell at least 15 items, and use select statements to order your items by price and show at least one statistic about the items.//
+
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, product_name TEXT, item_number INTEGER, color TEXT, price TEXT);
+
+INSERT INTO store VALUES (1, "Cleaning Cloth", 1234, "gray", "$14");
+INSERT INTO store VALUES (2, "Sponge", 2345, "purple", "$10");
+INSERT INTO store VALUES (3, "Kitchen Cleaner", 3456, "n/a", "$20");
+INSERT INTO store VALUES (4, "Bathroom Cleaner", 321, "n/a", "$20");
+INSERT INTO store VALUES (5, "Bathroom Cloth", 2233, "gray", "$15");
+INSERT INTO store VALUES (6, "Bathroom Cloth", 2234, "green", "$15");
+INSERT INTO store VALUES (7, "Mop Handle", 4321, "graphite", "$45");
+INSERT INTO store VALUES (8, "Dry Mop Pad", 3344, "yellow", "$20");
+INSERT INTO store VALUES (9, "Wet Mop Pad", 3554, "blue", "$20");
+INSERT INTO store VALUES (10, "Spray Bottle", 888, "clear", "$12");
+INSERT INTO store VALUES (11, "Spray Bottle", 777, "white", "$12");
+INSERT INTO store VALUES (12, "Spray Bottle", 554, "green", "$12");
+INSERT INTO store VALUES (13, "Dusting Cloth", 678, "gray", "$18");
+INSERT INTO store VALUES (14, "Window Cloth", 457, "pink", "$16");
+INSERT INTO store VALUES (15, "Hand Towel", 555, "gray", "$15");
+
+SELECT * FROM store;
+
+SELECT product_name, color, price FROM store ORDER by price DESC;
+
+SELECT MAX(price) from store;
+
+
