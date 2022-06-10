@@ -1,0 +1,28 @@
+/* Create table about the people and what they do here */
+ 
+CREATE table FAMOUS_PEOPLE (id INTEGER PRIMARY KEY, first_name TEXT, last_name TEXT, occupation INTEGER);
+
+INSERT into FAMOUS_PEOPLE (id, first_name, last_name, occupation) VALUES (1, "George", "Clooney", 1);
+INSERT INTO FAMOUS_People (id, first_name, last_name, occupation) VALUES (2, "JK", "Rowling", 2);
+INSERT INTO FAMOUS_PEOPLE (id, first_name, last_name, occupation) VALUES (3, "Carrie", "Underwood", 3);
+INSERT INTO FAMOUS_PEOPLE (id, first_name, last_name, occupation) VALUES (4, "Jennifer", "Anniston", 1);
+INSERT INTO FAMOUS_PEOPLE (id, first_name, last_name, occupation) VALUES (5, "JJ", "Watt", 4);
+INSERT INTO FAMOUS_PEOPLE (id, first_name, last_name, occupation) VALUES (6, "Garth", "Brooks", 3);
+INSERT INTO FAMOUS_PEOPLE (id, first_name, last_name, occupation) VALUES (7, "John", "Grisham", 2);
+INSERT INTO FAMOUS_PEOPLE (id, first_name, last_name, occupation) VALUES (8, "Fernando", "Tatis Jr.", 4);
+INSERT INTO FAMOUS_PEOPLE (id, first_name, last_name, occupation) VALUES (9, "Javier", "Baez", 4);
+INSERT INTO FAMOUS_PEOPLE (id, first_name, last_name, occupation) VALUES (10, "Doctor", "DoublePump", 5);
+
+CREATE TABLE PROFESSION (id INTEGER PRIMARY KEY, title TEXT);
+
+INSERT into PROFESSION (id, title) VALUES (1, "Actor");
+INSERT into PROFESSION (id, title) VALUES (2, "Author");
+INSERT into PROFESSION (id, title) VALUES (3, "Singer");
+INSERT into PROFESSION (id, title) VALUES (4, "Athlete");
+INSERT into PROFESSION (id, title) VALUES (5, "Streamer");
+
+SELECT FAMOUS_PEOPLE.first_name, FAMOUS_PEOPLE.last_name, PROFESSION.title as occupation
+from FAMOUS_PEOPLE
+JOIN PROFESSION
+ON FAMOUS_PEOPLE.occupation = PROFESSION.ID
+Order by occupation;
